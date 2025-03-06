@@ -1,0 +1,910 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2024.2">
+  <Nodes>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="18" y="42" width="276" height="204" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Ideas for refinement:
+
+1. Clean data to remove bogus locations (water, Canada, Cali)
+
+2. Feature engineering - TOD/DOW buckets
+
+3. Outliers on numeric fields
+
+4. Data Types</Text>
+          <Font name="Arial" size="9" style="1" />
+          <TextColor name="Black" />
+          <FillColor r="255" g="255" b="128" />
+          <Shape shape="0" />
+          <Justification Justification="3" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="Linear_Regression">
+        <Position x="1398" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">graphics</Value>
+          <Value name="standardize_pred">True</Value>
+          <Value name="internal_cv">True</Value>
+          <Value name="display_graphs">True</Value>
+          <Value name="set_seed_internal_cv">True</Value>
+          <Value name="set_seed_external_cv">True</Value>
+          <Value name="lambda_1se">True</Value>
+          <Value name="lambda_min">False</Value>
+          <Value name="Model Name">Steve</Value>
+          <Value name="Y Var">trip_duration</Value>
+          <Value name="X Vars">vendor_id,passenger_count,DistanceMiles</Value>
+          <Value name="Omit Constant">False</Value>
+          <Value name="Use Weights">False</Value>
+          <Value name="Weight Vec" />
+          <Value name="regularization">False</Value>
+          <Value name="alpha">0.5</Value>
+          <Value name="nfolds">5</Value>
+          <Value name="lambda">lambda_1se</Value>
+          <Value name="seed_internal_cv">1</Value>
+          <Value name="lambda_no_cv">0.5</Value>
+          <Value name="external_cv">True</Value>
+          <Value name="nfolds_external">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="external_seed_value">1</Value>
+          <Value name="graph.resolution">1x</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Steve</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" EngineDll="Macro" EngineDllEntryPoint="Linear_Regression/Supporting_Macros/Linear_Regression.yxmc" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1518" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\albert.bellamy\AppData\Local\Temp\Engine_40036_e753d97c36504ceb82700ef86c174d24_\Engine_40364_8de9f7f354cf4e42b567724fa641325e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1578" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\albert.bellamy\AppData\Local\Temp\Engine_40036_e753d97c36504ceb82700ef86c174d24_\Engine_40364_a879be12d5fd4314a335954003baa99b_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="28">
+      <GuiSettings>
+        <Position x="1302" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="estimation pct">34</Value>
+          <Value name="validation pct">20</Value>
+          <Value name="rand seed">1</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Create_Samples.yxmc" />
+    </Node>
+    <Node ToolID="29">
+      <GuiSettings Plugin="Score">
+        <Position x="1758" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="modelChoice">Local Model</Value>
+          <Value name="score field">Predicted duration</Value>
+          <Value name="is oversampled">False</Value>
+          <Value name="oversampled value">
+          </Value>
+          <Value name="original percent">2</Value>
+          <Value name="log y">False</Value>
+          <Value name="prediction.interval">False</Value>
+          <Value name="interval.level">95</Value>
+          <Value name="append.xdf">False</Value>
+          <Value name="num.records">256000</Value>
+          <Value name="credentials">
+          </Value>
+          <Value name="models">
+          </Value>
+          <Value name="page">
+          </Value>
+          <Value name="errorStatus">
+          </Value>
+          <Value name="modelDetailJSON">
+          </Value>
+          <Value name="modelDetails">{"Name":"","Owner":"","Status":"","Id":"","LastDeployment":"","LastUpdated":"","LatestVersion":"","ActiveVersion":"","NumReplications":"","NumVersions":""}</Value>
+          <Value name="promoteURL">
+          </Value>
+          <Value name="username">
+          </Value>
+          <Value name="model_name">
+          </Value>
+          <Value name="model_owner">
+          </Value>
+          <Value name="apiKey">
+          </Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Score\Supporting_Macros\score-engine.yxmc" EngineDll="Macro" EngineDllEntryPoint="Score\Supporting_Macros\score-engine.yxmc" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1854" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="id" selected="True" />
+            <SelectField field="Predicted_duration" selected="True" rename="trip_duration" type="Int64" size="8" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="31">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="2010" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\albert.bellamy\AppData\Local\Temp\Engine_40036_e753d97c36504ceb82700ef86c174d24_\Engine_40364_c9cf6df8393a4645923202c7a0bcede8_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="2022" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\Bellamy Submission 1 250306.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Bellamy Submission 1 250306.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="329" y="232" width="937" height="149" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Build Test Dataset</Caption>
+          <Style TextColor="#314c4a" FillColor="#80ffff" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Build Test Dataset</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="5">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="354" y="281" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>test.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="id" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="vendor_id" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="pickup_datetime" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="passenger_count" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="pickup_longitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="pickup_latitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="dropoff_longitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="dropoff_latitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+                <Field name="store_and_fwd_flag" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="462" y="281" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="pickup_longitude" fieldY="pickup_latitude" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="606" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="dropoff_longitude" fieldY="dropoff_latitude" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="17">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+            <Position x="822" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OutputDistance value="True" />
+              <ReturnNearest value="False" />
+              <DistToInsideEdge value="False" />
+              <OutputDriveTimeAndDistance value="False" />
+              <SpatialObjSource>Pickup Spot</SpatialObjSource>
+              <SpatialObjDest>Dropoff Spot</SpatialObjDest>
+              <DriveTimeDataSet>Latest</DriveTimeDataSet>
+              <AllowReverseRoute value="True" />
+              <MaxDriveTime value="30" />
+              <DriveDistanceOnly value="False" />
+              <OutputCardinalDirection value="True" />
+              <OutputDirectionDegrees value="False" />
+              <IsMetric value="False" />
+              <OutputUnits>Miles</OutputUnits>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+        </Node>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1062" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Pickup Spot" selected="False" />
+                <SelectField field="Dropoff Spot" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="714" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="pickup_longitude" selected="False" />
+                <SelectField field="pickup_latitude" selected="False" />
+                <SelectField field="dropoff_longitude" selected="False" />
+                <SelectField field="dropoff_latitude" selected="False" />
+                <SelectField field="Centroid" selected="True" rename="Pickup Spot" />
+                <SelectField field="Centroid2" selected="True" rename="Dropoff Spot" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="930" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="id" selected="True" />
+                <Field field="vendor_id" selected="True" />
+                <Field field="pickup_datetime" selected="True" />
+                <Field field="passenger_count" selected="True" />
+                <Field field="store_and_fwd_flag" selected="True" />
+                <Field field="Direction" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="id" size="9" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="String" />
+                <Field name="vendor_id" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="Byte" />
+                <Field name="pickup_datetime" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="DateTime" />
+                <Field name="passenger_count" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="Byte" />
+                <Field name="store_and_fwd_flag" size="1" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\test.csv" type="String" />
+                <Field name="Pickup Spot" size="2147483647" source="CreatePoints: x=pickup_longitude y=pickup_latitude" type="SpatialObj" />
+                <Field name="Dropoff Spot" size="2147483647" source="CreatePoints: x=dropoff_longitude y=dropoff_latitude" type="SpatialObj" />
+                <Field name="DistanceMiles" source="Distance: Distance Source=Pickup Spot Destination=Dropoff Spot Units=Miles" type="Double" />
+                <Field name="Direction" size="2" source="Distance: Direction Source=Pickup Spot Destination=Dropoff Spot" type="String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1182" y="282" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\albert.bellamy\AppData\Local\Temp\Engine_40036_e753d97c36504ceb82700ef86c174d24_\Engine_40364_749b860c3f2a436395d6af1b7f23a657_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="329" y="29" width="937" height="161" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Build Train Dataset</Caption>
+          <Style TextColor="#314c4a" FillColor="#80ff80" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Build Train Dataset</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+            <Position x="354" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>train.csv</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="id" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="vendor_id" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="pickup_datetime" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="dropoff_datetime" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="passenger_count" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="pickup_longitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="pickup_latitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="dropoff_longitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="dropoff_latitude" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="store_and_fwd_flag" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+                <Field name="trip_duration" size="254" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="V_String" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+        </Node>
+        <Node ToolID="7">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="462" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="pickup_longitude" fieldY="pickup_latitude" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="1182" y="78" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\albert.bellamy\AppData\Local\Temp\Engine_11692_381a363b032e4e7fa64b15194a0a0dc2_\Engine_40364_8c5cc796da2c4946a36d74be1260ada2_.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="9">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.CreatePoints.CreatePoints">
+            <Position x="606" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields fieldX="dropoff_longitude" fieldY="dropoff_latitude" />
+              <Mode>Double</Mode>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxCreatePoints" />
+        </Node>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxSpatialPluginsGui.Distance.Distance">
+            <Position x="822" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OutputDistance value="True" />
+              <ReturnNearest value="False" />
+              <DistToInsideEdge value="False" />
+              <OutputDriveTimeAndDistance value="False" />
+              <SpatialObjSource>Pickup Spot</SpatialObjSource>
+              <SpatialObjDest>Dropoff Spot</SpatialObjDest>
+              <DriveTimeDataSet>Latest</DriveTimeDataSet>
+              <AllowReverseRoute value="True" />
+              <MaxDriveTime value="30" />
+              <DriveDistanceOnly value="False" />
+              <OutputCardinalDirection value="True" />
+              <OutputDirectionDegrees value="True" />
+              <IsMetric value="False" />
+              <OutputUnits>Miles</OutputUnits>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxSpatialPluginsEngine.dll" EngineDllEntryPoint="AlteryxDistance" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="714" y="89" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="pickup_longitude" selected="False" />
+                <SelectField field="pickup_latitude" selected="False" />
+                <SelectField field="dropoff_longitude" selected="False" />
+                <SelectField field="dropoff_latitude" selected="False" />
+                <SelectField field="Centroid" selected="True" rename="Pickup Spot" />
+                <SelectField field="Centroid2" selected="True" rename="Dropoff Spot" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="1062" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="trip_duration" selected="True" type="Double" size="8" />
+                <SelectField field="Pickup Spot" selected="False" />
+                <SelectField field="Dropoff Spot" selected="False" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+            <Position x="930" y="90" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <Fields>
+                <Field field="id" selected="True" />
+                <Field field="vendor_id" selected="True" />
+                <Field field="pickup_datetime" selected="True" />
+                <Field field="dropoff_datetime" selected="True" />
+                <Field field="passenger_count" selected="True" />
+                <Field field="store_and_fwd_flag" selected="True" />
+                <Field field="trip_duration" selected="True" />
+                <Field field="Direction" selected="True" />
+                <Field field="*Unknown" selected="True" />
+              </Fields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+            <MetaInfo connection="Output">
+              <RecordInfo>
+                <Field name="id" size="9" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="String" />
+                <Field name="vendor_id" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="Byte" />
+                <Field name="pickup_datetime" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="DateTime" />
+                <Field name="dropoff_datetime" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="DateTime" />
+                <Field name="passenger_count" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="Byte" />
+                <Field name="store_and_fwd_flag" size="1" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="String" />
+                <Field name="trip_duration" source="File: C:\Users\albert.bellamy\OneDrive - alteryx.com\Alteryx social media\Will it Alteryx\Taxi Trip Duration Kaggle 250306\Data\train.csv" type="Int32" />
+                <Field name="Pickup Spot" size="2147483647" source="CreatePoints: x=pickup_longitude y=pickup_latitude" type="SpatialObj" />
+                <Field name="Dropoff Spot" size="2147483647" source="CreatePoints: x=dropoff_longitude y=dropoff_latitude" type="SpatialObj" />
+                <Field name="DistanceMiles" source="Distance: Distance Source=Pickup Spot Destination=Dropoff Spot Units=Miles" type="Double" />
+                <Field name="Direction" size="2" source="Distance: Direction Source=Pickup Spot Destination=Dropoff Spot" type="String" />
+                <Field name="DirectionDegrees" source="Distance: DirectionDegrees Source=Pickup Spot Destination=Dropoff Spot" type="Float" />
+              </RecordInfo>
+            </MetaInfo>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="24" Connection="Reports" />
+      <Destination ToolID="26" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Interactive Report" />
+      <Destination ToolID="27" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="29" Connection="Model" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="29" Connection="Data" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="28" Connection="Validation" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="29" Connection="Output" />
+      <Destination ToolID="30" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="31" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="28" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Taxi Trip Workflow 250306</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="ff838f3c-18da-461e-97ab-0d9725bf88af" />
+      <Telemetry>
+        <PreviousWorkflowId value="6473513f-a0a8-433c-83f6-f24dee458d30" />
+        <OriginWorkflowId value="6473513f-a0a8-433c-83f6-f24dee458d30" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
